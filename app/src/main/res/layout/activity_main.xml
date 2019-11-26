@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <LinearLayout
+        android:layout_margin="12dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/dashboard_app_logo"
+            android:src="@drawable/logo_a"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="12dp"
+            android:layout_width="102dp"
+            android:layout_height="102dp"/>
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="21sp"
+            android:text="mobile CHW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_marginTop="6dp"
+            android:textSize="21sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="Welcome Provider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/forms_menu_view"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/blue_curved_background"
+        android:padding="22dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_action_forms"
+            android:layout_marginEnd="12dp"
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:textSize="21sp"
+            android:text="Forms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/education_menu_view"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/blue_curved_background"
+        android:padding="22dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_action_education_resources"
+            android:layout_marginEnd="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:textSize="21sp"
+            android:text="Education Resource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cohorts_menu_view"
+        android:background="@drawable/blue_curved_background"
+        android:padding="22dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_action_registrations"
+            android:layout_marginEnd="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textSize="21sp"
+            android:textColor="@android:color/white"
+            android:text="Registrations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
