@@ -20,11 +20,11 @@
 
         <ImageView
             android:id="@+id/dashboard_app_logo"
-            android:src="@drawable/logo_a"
+            android:src="@drawable/brand_logo"
             android:layout_gravity="center_horizontal"
             android:layout_margin="12dp"
-            android:layout_width="102dp"
-            android:layout_height="102dp"/>
+            android:layout_width="152dp"
+            android:layout_height="152dp"/>
 
         <TextView
             android:layout_gravity="center_horizontal"
@@ -40,7 +40,7 @@
             android:textColor="@android:color/black"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
-            android:text="Welcome Provider"
+            android:text="Welcome CH Volunteer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -85,8 +85,8 @@
         <ImageView
             android:src="@drawable/ic_action_education_resources"
             android:layout_marginEnd="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
 
         <TextView
             android:textColor="@android:color/white"
@@ -108,8 +108,8 @@
         <ImageView
             android:src="@drawable/ic_action_registrations"
             android:layout_marginEnd="12dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="32dp"
+            android:layout_height="32dp"/>
 
         <TextView
             android:textSize="21sp"

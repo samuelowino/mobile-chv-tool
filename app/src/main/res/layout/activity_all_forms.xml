@@ -12,11 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"/>
 
-    <WebView
-        android:id="@+id/forms_webview"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/all_forms_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-
 
 
 </LinearLayout>
