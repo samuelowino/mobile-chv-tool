@@ -23,7 +23,7 @@
         <activity android:name=".view.LoginActivity" />
         <activity android:name=".AllEducationResources" />
         <activity android:name=".view.AllEducationResourcesActivity" />
-        <activity android:name=".view.EducationResourceRenderer" />
+        <activity android:name=".view.EducationResourceRendererActivity" />
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -39,6 +40,7 @@ public class EducationResourcesAdapter extends RecyclerView.Adapter<EducationRes
         EducationResource educationResource = educationResourceList.get(position);
         viewHolder.titleTextView.setText(educationResource.getTitle());
         viewHolder.descriptionTextView.setText(educationResource.getDescription());
+        viewHolder.coverImageView.setImageDrawable(context.getResources().getDrawable(educationResource.getDrawableResourceId()));
     }
 
     @Override
@@ -51,6 +53,7 @@ public class EducationResourcesAdapter extends RecyclerView.Adapter<EducationRes
         TextView titleTextView;
         TextView descriptionTextView;
         View parentContainer;
+        ImageView coverImageView;
 
         OnEducationResourceClickedListener onEducationResourceClickedListener;
 
@@ -60,11 +63,15 @@ public class EducationResourcesAdapter extends RecyclerView.Adapter<EducationRes
             titleTextView = itemView.findViewById(R.id.item_all_education_resources_title_text_view);
             descriptionTextView = itemView.findViewById(R.id.item_all_education_resources_description_text_view);
             parentContainer = itemView.findViewById(R.id.item_all_resource_layout_container);
+            coverImageView = itemView.findViewById(R.id.item_all_education_resources_image_view);
+            onEducationResourceClickedListener = educationResourceClickedListener;
+
+            parentContainer.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-
+            educationResourceClickedListener.onEducationResourceClicked(getAdapterPosition());
         }
     }
 

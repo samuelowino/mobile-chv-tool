@@ -13,13 +13,20 @@
         android:id="@+id/item_all_education_resources_title_text_view"
         android:textColor="@color/colorPrimary"
         android:textSize="22sp"
+        android:layout_marginBottom="8dp"
         android:text="Sanitation Education"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <ImageView
+        android:id="@+id/item_all_education_resources_image_view"
+        android:src="@drawable/sanitation"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+
     <TextView
         android:id="@+id/item_all_education_resources_description_text_view"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="6dp"
         android:textColor="@android:color/black"
         android:text="Find resources on how to educate the community on sanitation practices that will improve their wellbeing"
         android:layout_width="match_parent"

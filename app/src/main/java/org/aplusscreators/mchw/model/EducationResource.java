@@ -6,12 +6,22 @@ public class EducationResource {
     public String title;
     public String description;
     public String htmlFileUrl;
+    public int drawableResourceId;
 
-    public EducationResource(String uuid, String title, String description, String htmlFileUrl) {
+    public EducationResource(String uuid, String title, String description, String htmlFileUrl, int drawableResourceId) {
         this.uuid = uuid;
         this.title = title;
         this.description = description;
         this.htmlFileUrl = htmlFileUrl;
+        this.drawableResourceId = drawableResourceId;
+    }
+
+    public int getDrawableResourceId() {
+        return drawableResourceId;
+    }
+
+    public void setDrawableResourceId(int drawableResourceId) {
+        this.drawableResourceId = drawableResourceId;
     }
 
     public String getUuid() {

@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.aplusscreators.mchw.Form;
 import org.aplusscreators.mchw.R;
 import org.aplusscreators.mchw.adapter.AllFormsAdapter;
+import org.aplusscreators.mchw.model.Form;
 
 import java.util.ArrayList;
 import java.util.List;

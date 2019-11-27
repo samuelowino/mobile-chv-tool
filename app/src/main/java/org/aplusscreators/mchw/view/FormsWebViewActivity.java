@@ -20,8 +20,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import org.aplusscreators.mchw.Form;
 import org.aplusscreators.mchw.R;
+import org.aplusscreators.mchw.model.Form;
 
 public class FormsWebViewActivity extends AppCompatActivity {
 
