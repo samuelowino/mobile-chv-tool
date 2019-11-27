@@ -8,9 +8,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"/>
+        android:layout_height="?attr/actionBarSize">
+
+        <ImageView
+            android:transitionName="brandTransition"
+            android:src="@drawable/brand_logo"
+            android:layout_alignParentEnd="true"
+            android:layout_width="42dp"
+            android:layout_height="42dp"/>
+
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_margin="12dp"
@@ -19,6 +28,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
+            android:transitionName="brandTransition"
             android:id="@+id/dashboard_app_logo"
             android:src="@drawable/brand_logo"
             android:layout_gravity="center_horizontal"
@@ -106,7 +116,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:src="@drawable/ic_action_registrations"
+            android:src="@drawable/ic_action_maps"
             android:layout_marginEnd="12dp"
             android:layout_width="32dp"
             android:layout_height="32dp"/>
@@ -114,7 +124,7 @@
         <TextView
             android:textSize="21sp"
             android:textColor="@android:color/white"
-            android:text="Registrations"
+            android:text="Maps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
