@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/item_all_forms_layout_container"
+    android:id="@+id/item_all_resource_layout_container"
     android:orientation="vertical"
     android:paddingStart="15dp"
     android:paddingEnd="15dp"
@@ -13,7 +13,7 @@
         android:id="@+id/item_all_education_resources_title_text_view"
         android:textColor="@color/colorPrimary"
         android:textSize="22sp"
-        android:text="Antinetal Care Form"
+        android:text="Sanitation Education"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -21,7 +21,7 @@
         android:id="@+id/item_all_education_resources_description_text_view"
         android:layout_marginTop="4dp"
         android:textColor="@android:color/black"
-        android:text="This is a sample description of a form acting as place holder"
+        android:text="Find resources on how to educate the community on sanitation practices that will improve their wellbeing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

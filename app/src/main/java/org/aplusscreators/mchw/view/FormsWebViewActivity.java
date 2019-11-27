@@ -1,4 +1,4 @@
-package org.aplusscreators.mchw;
+package org.aplusscreators.mchw.view;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -19,6 +19,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.aplusscreators.mchw.Form;
+import org.aplusscreators.mchw.R;
 
 public class FormsWebViewActivity extends AppCompatActivity {
 

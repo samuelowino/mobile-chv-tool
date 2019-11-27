@@ -1,4 +1,4 @@
-package org.aplusscreators.mchw;
+package org.aplusscreators.mchw.model;
 
 public class Form {
 

@@ -6,7 +6,7 @@
     android:padding="12dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -108,7 +108,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/cohorts_menu_view"
+        android:id="@+id/maps_menu_view"
         android:background="@drawable/blue_curved_background"
         android:padding="22dp"
         android:orientation="horizontal"

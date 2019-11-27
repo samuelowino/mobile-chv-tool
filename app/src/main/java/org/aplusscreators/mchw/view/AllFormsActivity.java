@@ -1,4 +1,4 @@
-package org.aplusscreators.mchw;
+package org.aplusscreators.mchw.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.aplusscreators.mchw.Form;
+import org.aplusscreators.mchw.R;
+import org.aplusscreators.mchw.adapter.AllFormsAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

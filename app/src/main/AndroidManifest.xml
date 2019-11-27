@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity"
+        <activity android:name=".view.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,10 +17,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AllFormsActivity" />
-        <activity android:name=".FormsWebViewActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".view.AllFormsActivity" />
+        <activity android:name=".view.FormsWebViewActivity" />
+        <activity android:name=".view.MainActivity" />
+        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".AllEducationResources" />
+        <activity android:name=".view.AllEducationResourcesActivity" />
+        <activity android:name=".view.EducationResourceRenderer" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package org.aplusscreators.mchw;
+package org.aplusscreators.mchw.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.widget.EditText;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import org.aplusscreators.mchw.R;
 
 public class LoginActivity extends AppCompatActivity {
 

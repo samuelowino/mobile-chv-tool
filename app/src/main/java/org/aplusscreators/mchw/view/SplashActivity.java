@@ -1,4 +1,4 @@
-package org.aplusscreators.mchw;
+package org.aplusscreators.mchw.view;
 
 import android.content.Intent;
 import android.os.Bundle;

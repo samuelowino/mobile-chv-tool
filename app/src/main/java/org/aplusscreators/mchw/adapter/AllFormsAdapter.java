@@ -1,4 +1,4 @@
-package org.aplusscreators.mchw;
+package org.aplusscreators.mchw.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import org.aplusscreators.mchw.R;
+import org.aplusscreators.mchw.model.Form;
 
 import java.util.List;
 
@@ -55,8 +58,8 @@ public class AllFormsAdapter extends RecyclerView.Adapter<AllFormsAdapter.ViewHo
             super(itemView);
 
             parentContainer = itemView.findViewById(R.id.item_all_forms_layout_container);
-            formTitleTextView = itemView.findViewById(R.id.item_all_forms_form_title_text_view);
-            formDescriptionTextView = itemView.findViewById(R.id.item_all_forms_form_description_text_view);
+            formTitleTextView = itemView.findViewById(R.id.item_all_education_resources_title_text_view);
+            formDescriptionTextView = itemView.findViewById(R.id.item_all_education_resources_description_text_view);
 
             this.onFormClickedListener = onFormClickedListener;
 
