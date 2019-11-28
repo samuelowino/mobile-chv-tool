@@ -63,13 +63,10 @@ public class FormsWebViewActivity extends AppCompatActivity {
             }
         });
 
-        formWebView.loadUrl(composeUrl());
-
-
     }
 
     private String composeUrl() {
-        return prefix + "chew" + postFix;
+        return prefix + form.getFormName() + postFix;
     }
 
     @Override
@@ -78,11 +75,20 @@ public class FormsWebViewActivity extends AppCompatActivity {
             case android.R.id.home:
                 Intent intent = new Intent(FormsWebViewActivity.this,AllFormsActivity.class);
                 startActivity(intent);
+                finish();
                 break;
             default:
                 return false;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(FormsWebViewActivity.this,AllFormsActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @Override
@@ -98,6 +104,8 @@ public class FormsWebViewActivity extends AppCompatActivity {
                 getSupportActionBar().setDisplayShowHomeEnabled(true);
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
+            formWebView.loadUrl(composeUrl());
+
         } catch (Exception ex) {
             Log.e(TAG, "onStart: " + ex);
         }

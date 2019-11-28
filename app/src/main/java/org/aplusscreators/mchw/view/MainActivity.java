@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import org.aplusscreators.mchw.R;
+import org.aplusscreators.mchw.maps.CommunityMapActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, AllEducationResourcesActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        mapsMenuView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, CommunityMapActivity.class);
+                startActivity(intent);
             }
         });
     }

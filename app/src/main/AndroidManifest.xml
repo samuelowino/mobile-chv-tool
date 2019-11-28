@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="org.aplusscreators.mchw">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,9 +26,16 @@
         <activity android:name=".view.FormsWebViewActivity" />
         <activity android:name=".view.MainActivity" />
         <activity android:name=".view.LoginActivity" />
-        <activity android:name=".AllEducationResources" />
         <activity android:name=".view.AllEducationResourcesActivity" />
         <activity android:name=".view.EducationResourceRendererActivity" />
+        <activity android:name=".maps.CommunityMapActivity" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCHhaTeeI93rSxTc5ukn3_1-Cfithu6AU0"/>
+
     </application>
+
+
 
 </manifest>

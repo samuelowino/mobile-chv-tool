@@ -10,6 +10,7 @@
         android:layout_height="?attr/actionBarSize"/>
 
     <ImageView
+        android:id="@+id/login_chv_image_view"
         android:transitionName="brandTransition"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/brand_logo"

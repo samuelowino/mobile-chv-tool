@@ -36,8 +36,8 @@ public class AllEducationResourcesActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.education_resources_recycler_view);
 
-        resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "Sanitation Education", "Sanitation is important for all, helping to maintain health and increase life-spans. However, it is especially important for children.", "fileName", R.drawable.sanitation));
-        resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "Birth Education", "Birth control, family care as well as family support education resource for families", "fileName", R.drawable.birth));
+        resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "Sanitation Education", "Sanitation is important for all, helping to maintain health and increase life-spans. However, it is especially important for children.", "sanitation", R.drawable.sanitation));
+        resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "Birth Education", "Birth control, family care as well as family support education resource for families", "birth", R.drawable.birth));
         resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "HIV Education", "HIV stands for human immunodeficiency virus. It is the virus that can lead to acquired immunodeficiency syndrome or AIDS if not treated.", "fileName", R.drawable.hiv));
         resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "Malaria Control Education", "an intermittent and remittent fever caused by a protozoan parasite which invades the red blood cells and is transmitted by mosquitoes in many tropical and subtropical regions.", "fileName", R.drawable.malaria));
 
@@ -61,5 +61,13 @@ public class AllEducationResourcesActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new DividerItemDecoration(AllEducationResourcesActivity.this, DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(resourcesAdapter);
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(AllEducationResourcesActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

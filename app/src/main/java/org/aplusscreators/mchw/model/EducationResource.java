@@ -8,6 +8,9 @@ public class EducationResource {
     public String htmlFileUrl;
     public int drawableResourceId;
 
+    public EducationResource() {
+    }
+
     public EducationResource(String uuid, String title, String description, String htmlFileUrl, int drawableResourceId) {
         this.uuid = uuid;
         this.title = title;

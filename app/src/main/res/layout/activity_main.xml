@@ -28,7 +28,6 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:transitionName="brandTransition"
             android:id="@+id/dashboard_app_logo"
             android:src="@drawable/brand_logo"
             android:layout_gravity="center_horizontal"

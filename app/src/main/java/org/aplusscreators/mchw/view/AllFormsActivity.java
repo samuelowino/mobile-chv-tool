@@ -63,10 +63,10 @@ public class AllFormsActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        formList.add( new Form(UUID.randomUUID().toString(),"Immunization Form","The importance of immunization is so great that the American Centers for Disease Control and Prevention has named it one of the \"Ten Great Public Health Achievements in the 20th Century\".","chw"));
-        formList.add( new Form(UUID.randomUUID().toString(),"Sanitation Form","Sanitation refers to public health conditions related to clean drinking water and adequate treatment and disposal of human excreta and sewage.","chw"));
-        formList.add( new Form(UUID.randomUUID().toString(),"Demographics Form","This is a cHW for for health providers","chw"));
-        formList.add( new Form(UUID.randomUUID().toString(),"Referrals Form","In medicine, referral is the transfer of care for a patient from one clinician or clinic to another by request.","chw"));
+        formList.add( new Form(UUID.randomUUID().toString(),"Immunization Form","The importance of immunization is so great that the American Centers for Disease Control and Prevention has named it one of the \"Ten Great Public Health Achievements in the 20th Century\".","immunization"));
+        formList.add( new Form(UUID.randomUUID().toString(),"Sanitation Form","Sanitation refers to public health conditions related to clean drinking water and adequate treatment and disposal of human excreta and sewage.","chew"));
+        formList.add( new Form(UUID.randomUUID().toString(),"Demographics Form","This is a cHW for for health providers","demographics"));
+        formList.add( new Form(UUID.randomUUID().toString(),"Referrals Form","In medicine, referral is the transfer of care for a patient from one clinician or clinic to another by request.","refferal"));
 
         formsAdapter.notifyDataSetChanged();
     }
