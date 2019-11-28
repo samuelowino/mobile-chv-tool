@@ -59,7 +59,7 @@ public class FormsWebViewActivity extends AppCompatActivity {
             @Override
             public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
                 super.onReceivedError(view, request, error);
-                Toast.makeText(getApplicationContext(), "An Error Occurred", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "An Error Occurred", Toast.LENGTH_LONG).show();
             }
         });
 

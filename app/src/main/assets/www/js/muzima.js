@@ -213,6 +213,10 @@ $(document).ready(function () {
     var removeValidationMessage = function () {
         $('#validation-error').remove();
     };
+
+    function saveCHVForm() {
+        AppJavascriptInterface.saveCHVForm();
+    }
     /* End - Function to save the form */
 
     /*Start- BarCode Functionality*/

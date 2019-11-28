@@ -20,168 +20,188 @@
 
 <form id="breastcancer_form" name="breastcancer_form">
 
-<div class="section">
-    <h3>Demographics</h3>
+    <div class="section">
+        <h3>Demographics</h3>
 
-    <div class="form-group">
-        <input class="form-control" id="patient.uuid" name="patient.uuid" type="hidden" readonly="readonly">
+        <div class="form-group">
+            <input class="form-control" id="patient.uuid" name="patient.uuid" type="hidden">
+        </div>
+        <div class="form-group">
+            <label for="patient.medical_record_number">Patient ID:</label>
+            <input class="form-control" id="patient.medical_record_number"
+                   name="patient.medical_record_number" type="text">
+        </div>
+        <div class="form-group">
+            <label for="patient.family_name">Family Name:</label>
+            <input class="form-control" id="patient.family_name" name="patient.family_name"
+                   type="text">
+        </div>
+        <div class="form-group">
+            <label for="patient.given_name">Full Name:</label>
+            <input class="form-control" id="patient.given_name" name="patient.given_name"
+                   type="text">
+        </div>
+        <div class="form-group">
+            <label for="patient.middle_name">Household Number:</label>
+            <input class="form-control" id="patient.middle_name" name="patient.middle_name"
+                   type="text">
+        </div>
+        <div class="form-group">
+            <label for="patient.sex">Gender:</label>
+            <select class="form-control" id="patient.sex" name="patient.sex">
+                <option value="">...</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="patient.birth_date">Date Of Birth:</label>
+            <input class="form-control" id="patient.birth_date" name="patient.birth_date"
+                   type="text"
+            >
+        </div>
+
     </div>
-    <div class="form-group">
-        <label for="patient.medical_record_number">Patient ID:</label>
-        <input class="form-control" id="patient.medical_record_number" name="patient.medical_record_number" type="text"
-               readonly="readonly">
-    </div>
-    <div class="form-group">
-        <label for="patient.family_name">Family Name:</label>
-        <input class="form-control" id="patient.family_name" name="patient.family_name" type="text" readonly="readonly">
-    </div>
-    <div class="form-group">
-        <label for="patient.given_name">Full Name:</label>
-        <input class="form-control" id="patient.given_name" name="patient.given_name" type="text" readonly="readonly">
-    </div>
-    <div class="form-group">
-        <label for="patient.middle_name">Household Number:</label>
-        <input class="form-control" id="patient.middle_name" name="patient.middle_name" type="text" readonly="readonly">
-    </div>
-    <div class="form-group">
-        <label for="patient.sex">Gender:</label>
-        <select class="form-control" id="patient.sex" name="patient.sex" disabled="disabled">
-            <option value="">...</option>
-            <option value="M">Male</option>
-            <option value="F">Female</option>
-        </select>
+    <div class="section">
+        <h3>Medical History</h3>
+
+        <div class="form-group">
+            <label for="encounter.location_id">Patient's complaint(s):<span
+                    class="required">*</span></label>
+            <input class="form-control valid-location-only" id="encounter.location_id" type="text"
+                   placeholder="Start typing something..." required="required">
+            <input class="form-control" name="encounter.location_id" type="hidden">
+        </div>
+
+        <div class="form-group">
+            <label for="encounter.location_id">Present Medical History:<span
+                    class="required">*</span></label>
+            <input class="form-control valid-location-only" id="encounter.location_id" type="text"
+                   placeholder="Start typing something..." required="required">
+            <input class="form-control" name="encounter.location_id" type="hidden">
+        </div>
+
+        <div class="form-group">
+            <label for="encounter.location_id">Past Medical History:<span class="required">*</span></label>
+            <input class="form-control valid-location-only" id="encounter.location_id" type="text"
+                   placeholder="Start typing something..." required="required">
+            <input class="form-control" name="encounter.location_id" type="hidden">
+        </div>
+        <div class="form-group">
+            <input class="form-control" id="encounter.form_uuid" name="encounter.form_uuid"
+                   type="hidden"
+                   required="required">
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="patient.birth_date">Date Of Birth:</label>
-        <input class="form-control" id="patient.birth_date" name="patient.birth_date" type="text"
-               readonly="readonly" disabled="disabled">
+
+    <div class="section">
+        <h3>Physical Examination</h3>
+
+        <div class="form-group">
+            <label for="systolic_blood_pressure">
+                Systolic blood pressure (mmHg):<span class="required">*</span>
+            </label>
+            <input class="form-control systolicBloodPressure" id="systolic_blood_pressure"
+                   name="systolic_blood_pressure" type="number"
+                   placeholder="Please record today's SBP"
+                   data-concept="5085^SYSTOLIC BLOOD PRESSURE^99DCT"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label for="diastolic_blood_pressure">
+                Diastolic blood pressure (mmHg):<span class="required">*</span>
+            </label>
+            <input class="form-control diastolicBloodPressure lessThanSystolic"
+                   id="diastolic_blood_pressure"
+                   name="diastolic_blood_pressure" type="number"
+                   placeholder="Please record today's DBP"
+                   data-concept="5086^DIASTOLIC BLOOD PRESSURE^99DCT"
+                   required="required">
+        </div>
+        <div class="form-group">
+            <label for="pulse">Pulse rate (per minute):<span class="required">*</span></label>
+            <input class="form-control" id="pulse" name="pulse" type="number"
+                   placeholder="Please record today's pulse" required="required"
+                   data-concept="5087^PULSE^99DCT">
+        </div>
+        <div class="form-group">
+            <label for="pulse">Respiratory rate:<span class="required">*</span></label>
+            <input class="form-control" id="respiratory_rate" name="respiratory_rate" type="number"
+                   placeholder="Please record today's respiratory rate" required="required"
+                   data-concept="5242^RESPIRATORY RATE^99DCT">
+        </div>
+        <div class="form-group">
+            <label for="temperature_c">Temperature (centigrade):<span
+                    class="required">*</span></label>
+            <input class="form-control" id="temperature_c" name="temperature_c" type="number"
+                   placeholder="Please record today's temperature" required="required"
+                   data-concept="5088^TEMPERATURE (C)^99DCT">
+        </div>
+        <div class="form-group">
+            <label for="weight_kg">Weight (kg):<span class="required">*</span></label>
+            <input class="form-control" id="weight_kg" name="weight_kg" type="number"
+                   placeholder="Please record today's weight" required="required"
+                   data-concept="5089^WEIGHT (KG)^99DCT">
+        </div>
+        <div class="form-group">
+            <label for="height_cm">Height (cm):<span class="required">*</span></label>
+            <input class="form-control" id="height_cm" name="height_cm" type="number"
+                   placeholder="Please record today's height" required="required"
+                   data-concept="5090^HEIGHT (CM)^99DCT">
+        </div>
+
+        <div class="section">
+            <div class="form-group">
+                <label for="body_surface_area">Body surface area (m^2)</label>
+                <input class="form-control" id="body_surface_area" name="body_surface_area"
+                       type="number"
+
+                       data-concept="980^BODY SURFACE AREA^99DCT">
+            </div>
+        </div>
     </div>
 
-</div>
-<div class="section">
-    <h3>Medical History</h3>
-
-     <div class="form-group">
-        <label for="encounter.location_id">Patient's complaint(s):<span class="required">*</span></label>
-        <input class="form-control valid-location-only" id="encounter.location_id" type="text" placeholder="Start typing something..." required="required">
-        <input class="form-control" name="encounter.location_id" type="hidden">
-    </div>
-
-    <div class="form-group">
-        <label for="encounter.location_id">Present Medical History:<span class="required">*</span></label>
-        <input class="form-control valid-location-only" id="encounter.location_id" type="text" placeholder="Start typing something..." required="required">
-        <input class="form-control" name="encounter.location_id" type="hidden">
-    </div>
-
-     <div class="form-group">
-        <label for="encounter.location_id">Past Medical History:<span class="required">*</span></label>
-        <input class="form-control valid-location-only" id="encounter.location_id" type="text" placeholder="Start typing something..." required="required">
-        <input class="form-control" name="encounter.location_id" type="hidden">
-    </div>
-    <div class="form-group">
-        <input class="form-control" id="encounter.form_uuid" name="encounter.form_uuid" type="hidden"
-               required="required">
-    </div>
-</div>
-
-
-       
-
-
-<div class="section">
-    <h3>Physical Examination</h3>
-
-    <div class="form-group">
-        <label for="systolic_blood_pressure">
-            Systolic blood pressure (mmHg):<span class="required">*</span>
-        </label>
-        <input class="form-control systolicBloodPressure" id="systolic_blood_pressure"
-               name="systolic_blood_pressure" type="number"
-               placeholder="Please record today's SBP" data-concept="5085^SYSTOLIC BLOOD PRESSURE^99DCT"
-               required="required">
-    </div>
-    <div class="form-group">
-        <label for="diastolic_blood_pressure">
-            Diastolic blood pressure (mmHg):<span class="required">*</span>
-        </label>
-        <input class="form-control diastolicBloodPressure lessThanSystolic" id="diastolic_blood_pressure"
-               name="diastolic_blood_pressure" type="number"
-               placeholder="Please record today's DBP" data-concept="5086^DIASTOLIC BLOOD PRESSURE^99DCT"
-               required="required">
-    </div>
-    <div class="form-group">
-        <label for="pulse">Pulse rate (per minute):<span class="required">*</span></label>
-        <input class="form-control" id="pulse" name="pulse" type="number"
-               placeholder="Please record today's pulse" required="required"
-               data-concept="5087^PULSE^99DCT">
-    </div>
-    <div class="form-group">
-        <label for="pulse">Respiratory rate:<span class="required">*</span></label>
-        <input class="form-control" id="respiratory_rate" name="respiratory_rate" type="number"
-               placeholder="Please record today's respiratory rate" required="required"
-               data-concept="5242^RESPIRATORY RATE^99DCT">
-    </div>
-    <div class="form-group">
-        <label for="temperature_c">Temperature (centigrade):<span class="required">*</span></label>
-        <input class="form-control" id="temperature_c" name="temperature_c" type="number"
-               placeholder="Please record today's temperature" required="required"
-               data-concept="5088^TEMPERATURE (C)^99DCT">
-    </div>
-    <div class="form-group">
-        <label for="weight_kg">Weight (kg):<span class="required">*</span></label>
-        <input class="form-control" id="weight_kg" name="weight_kg" type="number"
-               placeholder="Please record today's weight" required="required"
-               data-concept="5089^WEIGHT (KG)^99DCT">
-    </div>
-    <div class="form-group">
-        <label for="height_cm">Height (cm):<span class="required">*</span></label>
-        <input class="form-control" id="height_cm" name="height_cm" type="number"
-               placeholder="Please record today's height" required="required"
-               data-concept="5090^HEIGHT (CM)^99DCT">
-    </div>
 
     <div class="section">
         <div class="form-group">
-            <label for="body_surface_area">Body surface area (m^2)</label>
-            <input class="form-control" id="body_surface_area" name="body_surface_area" type="number"
-                   disabled="disabled"
-                   data-concept="980^BODY SURFACE AREA^99DCT">
+            <label for="encounter.provider_id_select">Community Health Worker Name:</label>
+            <input class="form-control valid-provider-only" id="encounter.provider_id_select"
+                   type="text"
+                   placeholder="Start typing provider name here ...">
+            <input class="form-control" name="encounter.provider_id_select" type="hidden">
+        </div>
+        <div class="form-group hidden">
+            <select id="select_providers">
+                <option data-provider="Daurine Achieng Agumba" value="3419-9">Daurine Achieng
+                    Agumba
+                </option>
+                <option data-provider="Irene Chepkosgei	Kurgat" value="3420-7">Irene Chepkosgei
+                    Kurgat
+                </option>
+                <option data-provider="Rose	Cheruto	Toroitich" value="3421-5">Rose Cheruto
+                    Toroitich
+                </option>
+
+            </select>
+        </div>
+
+        <div class="form-group show_provider_id_text">
+            <label for="encounter.provider_id">Enter CHV system-id:<span
+                    class="required">*</span></label>
+            <input class="form-control checkDigit" id="encounter.provider_id"
+                   name="encounter.provider_id" type="text"
+                   required="required">
+        </div>
+
+        <div class="form-group">
+            <label for="return_visit_date">Return visit date:</label>
+            <input class="form-control datepicker checkFutureDate future-date"
+                   data-concept="5096^RETURN VISIT DATE^99DCT"
+                   id="return_visit_date" name="return_visit_date" type="text">
         </div>
     </div>
-</div>
-
-
-
-<div class="section">
-    <div class="form-group">
-        <label for="encounter.provider_id_select">Community Health Worker Name:</label>
-        <input class="form-control valid-provider-only" id="encounter.provider_id_select" type="text"
-               placeholder="Start typing provider name here ...">
-        <input class="form-control" name="encounter.provider_id_select" type="hidden">
-    </div>
-    <div class="form-group hidden">
-        <select id="select_providers">
-            <option data-provider = "Daurine Achieng Agumba" value = "3419-9">Daurine Achieng Agumba</option>
-            <option data-provider = "Irene Chepkosgei	Kurgat" value = "3420-7">Irene Chepkosgei	Kurgat</option>
-            <option data-provider = "Rose	Cheruto	Toroitich" value = "3421-5">Rose	Cheruto	Toroitich</option>
-            
-        </select>
-    </div>
-
-    <div class="form-group show_provider_id_text">
-        <label for="encounter.provider_id">Enter CHW system-id:<span class="required">*</span></label>
-        <input class="form-control checkDigit" id="encounter.provider_id" name="encounter.provider_id" type="text"
-               required="required" disabled="disabled">
-    </div>
-
-    <div class="form-group">
-        <label for="return_visit_date">Return visit date:</label>
-        <input class="form-control datepicker checkFutureDate future-date" data-concept="5096^RETURN VISIT DATE^99DCT"
-               id="return_visit_date" name="return_visit_date" type="text"
-               readonly="readonly">
-    </div>
-</div>
 
 </form>
 </body>
@@ -197,15 +217,11 @@ $(document).ready(function () {
     }
 
     $('#save_draft').click(function () {
-        $(this).prop('disabled', true);
-        document.saveDraft(this);
-        $(this).prop('disabled', false);
+          AppJavascriptInterface.saveCHVForm();
     });
 
     $('#submit_form').click(function () {
-        $(this).prop('disabled', true);
-        document.submit();
-        $(this).prop('disabled', false);
+        AppJavascriptInterface.saveCHVForm();
     });
 
     $('#breastcancer_form').validate({
@@ -597,5 +613,6 @@ $(document).ready(function () {
     document.setupValidationForLocation("$('#encounter\\.location_id').val()","encounter\\.location_id");
 
 });
+
 </script>
 </html>

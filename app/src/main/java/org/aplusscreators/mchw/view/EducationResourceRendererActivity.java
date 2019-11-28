@@ -26,7 +26,6 @@ public class EducationResourceRendererActivity extends AppCompatActivity {
     private final String postFix = ".html";
     private final String prefix = "file:///android_asset/www/";
 
-    Toolbar toolbar;
     WebView resourcesWebView;
     WebSettings webSettings;
     EducationResource educationResource;
