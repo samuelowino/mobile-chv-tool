@@ -6,6 +6,7 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,6 +28,7 @@ public class AllEducationResourcesActivity extends AppCompatActivity {
     public static final String EDUCATION_RESOURCE_SERIALIZED_KEY = "education_resource_serialized_key";
     RecyclerView recyclerView;
     EducationResourcesAdapter resourcesAdapter;
+    Toolbar toolbar;
     List<EducationResource> resourcesList = new ArrayList<>();
 
     @Override
@@ -35,11 +37,12 @@ public class AllEducationResourcesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_all_education_resources);
 
         recyclerView = findViewById(R.id.education_resources_recycler_view);
+        toolbar = findViewById(R.id.all_education_resources_toolbar);
 
         resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "Sanitation Education", "Sanitation is important for all, helping to maintain health and increase life-spans. However, it is especially important for children.", "sanitation", R.drawable.sanitation));
         resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "Birth Education", "Birth control, family care as well as family support education resource for families", "birth", R.drawable.birth));
-        resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "HIV Education", "HIV stands for human immunodeficiency virus. It is the virus that can lead to acquired immunodeficiency syndrome or AIDS if not treated.", "fileName", R.drawable.hiv));
-        resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "Malaria Control Education", "an intermittent and remittent fever caused by a protozoan parasite which invades the red blood cells and is transmitted by mosquitoes in many tropical and subtropical regions.", "fileName", R.drawable.malaria));
+        resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "HIV Education", "HIV stands for human immunodeficiency virus. It is the virus that can lead to acquired immunodeficiency syndrome or AIDS if not treated.", "birth", R.drawable.hiv));
+        resourcesList.add(new EducationResource(UUID.randomUUID().toString(), "Malaria Control Education", "an intermittent and remittent fever caused by a protozoan parasite which invades the red blood cells and is transmitted by mosquitoes in many tropical and subtropical regions.", "birth", R.drawable.malaria));
 
         resourcesAdapter = new EducationResourcesAdapter(resourcesList, AllEducationResourcesActivity.this, new EducationResourcesAdapter.OnEducationResourceClickedListener() {
             @Override
@@ -60,6 +63,12 @@ public class AllEducationResourcesActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(AllEducationResourcesActivity.this));
         recyclerView.addItemDecoration(new DividerItemDecoration(AllEducationResourcesActivity.this, DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(resourcesAdapter);
+
+        setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
 
     }
 
