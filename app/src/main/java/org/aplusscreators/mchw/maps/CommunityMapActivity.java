@@ -12,9 +12,13 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.LatLngBounds;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import org.aplusscreators.mchw.R;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class CommunityMapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -33,12 +37,69 @@ public class CommunityMapActivity extends AppCompatActivity implements OnMapRead
     @Override
     public void onMapReady(GoogleMap googleMap) {
         this.googleMap = googleMap;
-        this.googleMap.addMarker(
-                new MarkerOptions()
-                        .position(new LatLng(12, 12))
-                        .title("Current Location"));
+        this.googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
 
-        moveCamera(new LatLng(0.0236,37.9062),10,"Your Location",null);
+        moveCamera(new LatLng(0.290393,34.764353),16,"Your Location",null);
+
+        for (MarkerOptions markerOption : getMarkerOptions()) {
+            Marker marker  = this.googleMap.addMarker(markerOption);
+            marker.showInfoWindow();
+        }
+
+    }
+
+    private List<MarkerOptions> getMarkerOptions(){
+        List<MarkerOptions> markerOptionsList = Arrays.asList(
+                new MarkerOptions()
+                        .position(new LatLng(0.290393, 34.764353))
+                        .title("Current Location")
+                .snippet(""),
+
+                new MarkerOptions()
+                        .position(new LatLng(0.289250, 34.766167))
+                        .title("House A")
+                .snippet(""),
+
+                new MarkerOptions()
+                        .position(new LatLng(0.288083, 34.761806))
+                        .title("House B"),
+
+                new MarkerOptions()
+                        .position(new LatLng(0.2877668,34.761941))
+                        .title("House C"),
+
+                new MarkerOptions()
+                        .position(new LatLng(0.288056, 34.766194))
+                        .title("House D"),
+                new MarkerOptions()
+                        .position(new LatLng(0.2886741,34.7617654))
+                        .title("House E"),
+
+                new MarkerOptions()
+                        .position(new LatLng(0.2890498,34.7646756))
+                        .title("House F"),
+
+                new MarkerOptions()
+                        .position(new LatLng(0.28925,34.7656195))
+                        .title("House B"),
+                new MarkerOptions()
+                        .position(new LatLng(0.289708, 34.760635))
+                        .title("House C"),
+
+                new MarkerOptions()
+                        .position(new LatLng(0.287584, 34.763553))
+                        .title("House D"),
+                new MarkerOptions()
+                        .position(new LatLng(0.290255, 34.764079))
+                        .title("House E"),
+
+                new MarkerOptions()
+                        .position(new LatLng(0.287262, 34.767029))
+                        .title("House F")
+        );
+
+        return markerOptionsList;
+
 
     }
 
